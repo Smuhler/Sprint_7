@@ -1,11 +1,13 @@
 from urls import *
 import requests
 import json
+import allure
 
 
 class Order:
 
     @staticmethod
+    @allure.step('Создаем заказ')
     def create_order(colour):
         payload = {
             "firstName": "Naruto",
@@ -18,6 +20,6 @@ class Order:
             "comment": "Saske, come back to Konoha",
             "color": colour
         }
-        return requests.post(f'https://qa-scooter.praktikum-services.ru/api/v1/orders', data=json.dumps(payload))
+        return requests.post(create_order_url, data=json.dumps(payload))
 
 
