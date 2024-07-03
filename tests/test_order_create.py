@@ -1,10 +1,6 @@
 from conftest import *
 from data import colours
 from endpoints.orders import *
-from endpoints.courier import *
-from unittest.mock import patch
-from urls import *
-import requests
 
 
 class TestCreateOrder:

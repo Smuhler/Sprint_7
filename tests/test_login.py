@@ -1,8 +1,5 @@
 from conftest import *
 from endpoints.courier import *
-from unittest.mock import patch
-from urls import *
-import requests
 
 
 class TestLoginRequest:
